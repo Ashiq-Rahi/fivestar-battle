@@ -205,13 +205,21 @@
         const playerName = player.innerText;
         const playerList = document.createElement("li");
         playerList.innerText = playerName;
-        document.getElementById("listOfPlayers").appendChild(playerList);
+
+        const listNumber = document.getElementsByTagName("li").length;
+        if (listNumber >= 5) {
+          alert("You have already selected 5 Players");
+          disable = false;
+        } else {
+          document.getElementById("listOfPlayers").appendChild(playerList);
+        }
       }
       function inputValue(id) {
         const input = document.getElementById(id).value;
         const number = parseFloat(input);
         return number;
       }
+
       document.getElementById("total").addEventListener("click", function () {
         const listNumber = document.getElementsByTagName("li").length;
         const input = inputValue("costPerPlayer");
