@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FiveStar Battle</title>
+    <!-- ------------------custom css link-------------------------  -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Five Star Battle</h1>
+      <p>
+        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+        sint. Velit officia consequat duis enim velit mollit.Exercitation veniam
+        consequat sunt nostrud amet
+      </p>
+    </header>
+    <section class="main">
+      <div class="player-container">
+        <div class="card">
+          <div class="card-image">
+            <img src="/images/sakib.png" alt="" />
+          </div>
+          <div class="card-text">
+            <h3 id="sakib">Sakib Al Hasan</h3>
+            <p>1500 Runs . 25 Wickets</p>
+            <button
+              onclick="select('sakib'), disable(this)"
+              class="player-select-btn"
+            >
+              SELECT
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <img src="/images/afridi.jpg" alt="" />
+          </div>
+          <div class="card-text">
+            <h3 id="afridi">Shahid Afridi</h3>
+            <p>1500 Runs . 25 Wickets</p>
+            <button
+              onclick="select('afridi'), disable(this)"
+              class="player-select-btn"
+            >
+              SELECT
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <img src="/images/guptill.jpg" alt="" />
+          </div>
+          <div class="card-text">
+            <h3 id="guptill">Martin Guptill</h3>
+            <p>1500 Runs . 25 Wickets</p>
+            <button
+              onclick="select('guptill'), disable(this)"
+              class="player-select-btn"
+            >
+              SELECT
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <img src="/images/kohli.jpg" alt="" />
+          </div>
+          <div class="card-text">
+            <h3 id="kohli">Virat Kohli</h3>
+            <p>1500 Runs . 25 Wickets</p>
+            <button
+              onclick="select('kohli'), disable(this)"
+              class="player-select-btn"
+            >
+              SELECT
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <img src="/images/sangakara.webp" alt="" />
+          </div>
+          <div class="card-text">
+            <h3 id="kumar">Kumar Sangakkara</h3>
+            <p>1500 Runs . 25 Wickets</p>
+            <button
+              onclick="select('kumar'), disable(this)"
+              class="player-select-btn"
+            >
+              SELECT
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <img src="/images/moen-ali.webp" alt="" />
+          </div>
+          <div class="card-text">
+            <h3 id="moen">Moen Ali</h3>
+            <p>1500 Runs . 25 Wickets</p>
+            <button
+              onclick="select('moen'), disable(this)"
+              class="player-select-btn"
+            >
+              SELECT
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <img src="/images/usman.png" alt="" />
+          </div>
+          <div class="card-text">
+            <h3 id="usman">Usman Khuwaja</h3>
+            <p>1500 Runs . 25 Wickets</p>
+            <button
+              onclick="select('usman'), disable(this)"
+              class="player-select-btn"
+            >
+              SELECT
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <img src="/images/mashrafe.png" alt="" />
+          </div>
+          <div class="card-text">
+            <h3 id="mash">Mashrafe Mortuza</h3>
+            <p>1500 Runs . 25 Wickets</p>
+            <button
+              onclick="select('mash'), disable(this)"
+              class="player-select-btn"
+            >
+              SELECT
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <img src="/images/mahmudullah.webp" alt="" />
+          </div>
+          <div class="card-text">
+            <h3 id="mahmudullah">Mahmudullah</h3>
+            <p>1500 Runs . 25 Wickets</p>
+            <button
+              onclick="select('mahmudullah'), disable(this)"
+              class="player-select-btn"
+            >
+              SELECT
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- ------------------budget section starts----------------- -->
+      <div class="player-budget">
+        <!-- ------------------player selection starts----------------- -->
+        <div class="selection">
+          <h2>Selected-V</h2>
+          <ol id="listOfPlayers"></ol>
+        </div>
+        <!-- ------------------player selection ends----------------- -->
+        <div class="budget">
+          <h2>Budget</h2>
+          <div class="pay">
+            <p>Per Player</p>
+            <input id="costPerPlayer" type="text" />
+          </div>
+          <button id="total" class="calc-btn">Calculate</button>
+          <div class="pay">
+            <p>Player expenses</p>
+            <span id="playerCost">0000</span>
+          </div>
+
+          <div class="pay">
+            <p>Manager</p>
+            <input id="manager" type="text" />
+          </div>
+          <div class="pay">
+            <p>Coach</p>
+            <input id="coach" type="text" />
+          </div>
+
+          <button id="grandTotal" class="calc-btn">Calculate Total</button>
+          <div class="pay">
+            <p>Total</p>
+            <span id="grandAmount" class="total">0000</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>Copyright &copy 2022 all rights reserved</p>
+    </footer>
+    <!-- --------------------javascript--------------------- -->
+    <script>
+      function disable(x) {
+        x.disabled = true;
+      }
+      function select(id) {
+        const player = document.getElementById(id);
+        const playerName = player.innerText;
+        const playerList = document.createElement("li");
+        playerList.innerText = playerName;
+        document.getElementById("listOfPlayers").appendChild(playerList);
+      }
+      function inputValue(id) {
+        const input = document.getElementById(id).value;
+        const number = parseFloat(input);
+        return number;
+      }
+      document.getElementById("total").addEventListener("click", function () {
+        const listNumber = document.getElementsByTagName("li").length;
+        const input = inputValue("costPerPlayer");
+        document.getElementById("playerCost").innerText =
+          "$ " + listNumber * input;
+      });
+      document
+        .getElementById("grandTotal")
+        .addEventListener("click", function () {
+          const listNumber = document.getElementsByTagName("li").length;
+          const input = inputValue("costPerPlayer");
+          const manager = inputValue("manager");
+          const coach = inputValue("coach");
+          const playerTotal = input * listNumber;
+          document.getElementById("grandAmount").innerText =
+            manager + coach + playerTotal;
+        });
+    </script>
+  </body>
+</html>
